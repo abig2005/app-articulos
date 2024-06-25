@@ -1,0 +1,171 @@
+
+
+<div class="container app">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 style="text-align: center;">
+        {{title}}
+      </h1>
+    </div>
+   
+
+    <div class="col-sm-4">
+      <div class="alert alert-susccess alert-dismissable">
+        <a href="#" class="close">&times;</a>
+        {{msg}}
+      </div>
+    </div>
+  </div>
+  <div class="container app">
+    <h2>Agregar datos</h2>
+    <form form-horizontal ng-app="" #formDatos="ngForm">
+      <!--input name-->
+      <div class="form-group">
+        <label for="name" class="control-label col-sm-2">Nombre </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" name="name" required #name="ngModel" [(ngModel)]="modelo.name" placeholder="escribe un nombre nuevo">
+          <div class="alert alert-danger mt-2" [hidden]="name.valid || name.pristine" >Campo Obligatorio </div>
+        </div>
+      </div>
+   
+
+     <!--input age-->
+     <div class="form-group">
+      <label for="age" class="control-label col-sm-2">Edad</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="age" name="age"  [(ngModel)]="modelo.age" placeholder="escribe la edad ">
+
+      </div>
+      
+    </div>
+
+     <!--input position-->
+     <div class="form-group">
+      <label for="position" class="control-label col-sm-2">Puesto</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="position" name="position" required #position="ngModel" [(ngModel)]="modelo.position" placeholder="escribe el puesto">
+        <div class="alert alert-danger mt-2" [hidden]="position.valid || position.pristine" >Campo Obligatorio </div>
+      </div>
+    </div>
+
+     <!--input salary-->
+     <div class="form-group">
+      <label for="salary" class="control-label col-sm-2">Salario</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="salary" name="salary" required #salary="ngModel" [(ngModel)]="modelo.salary" placeholder="escribe tu salario ">
+        <div class="alert alert-danger mt-2" [hidden]="salary.valid || salary.pristine" >Campo Obligatorio </div>
+      </div>
+    </div>
+
+     <!--input email-->
+     <div class="form-group">
+      <label for="email" class="control-label col-sm-2">E-mail</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="modelo.email" placeholder="escribe tu E-mail ">
+
+      </div>
+    </div>
+    <!--botón de envio-->
+    <div class="form-group">
+      <div class="col-sm-6-col-sm-offset-2">
+        <button type="submit" class="btn btn-success" (click)="addEmpleado()" [disabled]="true">Guardar</button>
+      </div>
+    </div>
+  </form>
+
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Datos:</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <td>Nombre</td>
+            <td>Edad</td>
+            <td>Puesto</td>
+            <td>Salario</td>
+            <td>E-mail</td>
+            <td>Acciones</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of empleados; let i=index">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.position}}</td>
+            <td>{{item.salary}}</td>
+            <td>{{item.email}}</td>
+            <td>
+              <a (click)="editEmpleado(i)" class="btn btn-success">Editar</a>
+              <a (click)="deleteEmpleado(i)" class="btn btn-danger">Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-4">
+      <h2>Actualizar Datos</h2>
+      <form class="form-horizontal">
+         <!--input name-->
+      <div class="form-group">
+        <label for="name" class="control-label col-sm-2">Nombre </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="modelo2.name" placeholder="escribe un nombre nuevo">
+
+        </div>
+      </div>
+   
+
+     <!--input age-->
+     <div class="form-group">
+      <label for="age" class="control-label col-sm-2">Edad</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="age" name="age" [(ngModel)]="modelo2.age" placeholder="escribe la edad ">
+
+      </div>
+    </div>
+
+     <!--input position-->
+     <div class="form-group">
+      <label for="position" class="control-label col-sm-2">Puesto</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="position" name="name" [(ngModel)]="modelo2.position" placeholder="escribe el puesto">
+
+      </div>
+    </div>
+
+     <!--input salary-->
+     <div class="form-group">
+      <label for="salary" class="control-label col-sm-2">Salario</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="modelo2.salary" placeholder="escribe tu salario ">
+
+      </div>
+    </div>
+
+     <!--input email-->
+     <div class="form-group">
+      <label for="email" class="control-label col-sm-2">E-mail</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="modelo2.email" placeholder="escribe tu E-mail ">
+
+      </div>
+    </div>
+    <!--botón de envio-->
+    <div class="form-group">
+      <div class="col-sm-6-col-sm-offset-2">
+        <button type="submit" class="btn btn-success" (click)="updateEmpleado()" >Guardar</button>
+      </div>
+    </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+
+
+<router-outlet />

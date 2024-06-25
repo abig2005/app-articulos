@@ -1,0 +1,120 @@
+<!--barra de navegacion-->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">principial</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">fotos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">videos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">contactos</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-danger">Eliminar</button>
+<button type="button" class="btn btn-success">Guardar</button>
+<div class="container mt-3">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-hover table-bordered table-dark">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john&#64;example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary&#64;example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july&#64;example.com</td>
+
+      </tr>
+      <tr>
+          <td>Zaira</td>
+          <td>Gutierrez</td>
+          <td>gutierrezzaira181&#64;gmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<p class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus porro, tempore ea doloremque, vero dolores aspernatur, et exercitationem quasi laborum alias repellat quaerat. Vitae odio, voluptates iure praesentium nihil similique.
+</p>
+<img src="img/logo.png" class="rounded" alt="logo UTNG">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="mt-4 p-5 bg-primary text-white rounded">
+  <h1>Jumbotron Example</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi accusantium aliquam adipisci deserunt consequuntur officiis, soluta saepe necessitatibus. Harum qui earum consequuntur, veritatis nemo sit natus dicta, dolorem ducimus obcaecati nostrum, tempora alias similique corrupti. Saepe, pariatur? Voluptas, numquam? Corporis esse hic accusamus nisi, doloribus aspernatur dolor ullam. Recusandae voluptas commodi illum nam enim quisquam sed debitis, consequuntur maiores cupiditate fuga omnis rem optio obcaecati harum, ea, repudiandae praesentium quis nostrum tempora atque porro voluptate eum itaque. Nemo minima ea fugit facere ipsa? Repudiandae nostrum, tempore, velit culpa inventore odit provident blanditiis nihil nisi ipsa, cupiditate maiores tempora minima esse rerum dolores. Hic, nihil necessitatibus! Explicabo numquam, in eos, itaque perspiciatis accusantium reprehenderit aliquid maiores fuga, delectus porro? Laudantium perspiciatis at, nostrum laboriosam eos optio, quia amet doloremque nam et libero expedita enim officia? Eum blanditiis et distinctio, ab itaque sequi vel dolores velit consectetur, quam, unde possimus perspiciatis. Perferendis earum accusantium dicta tenetur autem quaerat dolores quidem veritatis rem est! Harum, eligendi esse! In atque reiciendis nostrum libero fugiat facere officiis, eveniet minus porro corporis debitis nemo beatae reprehenderit doloribus maiores autem adipisci iure ex natus vero quo dicta? Doloremque debitis iusto illum nihil dolorem! Accusantium ex nobis tempora commodi nihil! Consequuntur beatae totam facere!
+  </p>
+</div>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+<!-- Indicators/dots -->
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+</div>
+
+<!-- The slideshow/carousel -->
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <img src="img/zorro.jpg" alt="Los Angeles" class="d-block w-96">
+</div>
+<div class="carousel-item">
+  <img src="img/ardilla.jpg" alt="Chicago" class="d-block w-96">
+</div>
+<div class="carousel-item">
+  <img src="img/leopardo.jpg" alt="New York" class="d-block w-96">
+</div>
+</div>
+
+<!-- Left and right controls/icons -->
+<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+<router-outlet />
